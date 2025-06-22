@@ -15,6 +15,8 @@ In this project you will build such a pipeline.
   * [The configuration](#the-configuration)
   * [Running the entire pipeline or just a selection of steps](#Running-the-entire-pipeline-or-just-a-selection-of-steps)
   * [Pre-existing components](#pre-existing-components)
+    
+- [Submission Detail](#submission-detail)
 
 ## Preliminary steps
 
@@ -179,3 +181,20 @@ Please, make sure all steps are using **the same** python version and that you h
 ## License
 
 [License](LICENSE.txt)
+
+## Submission Detail
+
+
+This submission includes the required public links:
+
+- **GitHub Repository**: [Project-Build an ML Pipeline Starter.git](https://github.com/claudiab0511/Project-Build-an-ML-Pipeline-Starter.git)
+- **W&B Project**: [W&B Project- NCY Airbnb](https://wandb.ai/claudiablock-western-governors-university/nyc_airbnb?nw=nwuserclaudiablock)
+
+All required artifacts and pipeline steps have been implemented, tested, and versioned, including:
+
+- Cleaned data and tests
+- Data splitting and model traning
+- Hyperparameter optimization
+- Model selection and tagging ('prod')
+- Final run on new sample data 
+
