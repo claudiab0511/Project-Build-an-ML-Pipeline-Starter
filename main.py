@@ -85,9 +85,11 @@ def go(config: DictConfig):
                     "input": "clean_sample.csv:latest",
                     "test_size": config["modeling"]["test_size"],
                     "random_seed": config["modeling"]["random_seed"],
-                    "stratify_by": config["modeling"]["stratify_by"],
-                },
-            )
+            #If stratify_by is "none", pass empty string as expected by the component
+            "stratify_by": "" if config["modeling"]["stratify_by"] == "none"
+                            else config["modeling"]["stratify_by"],
+        },
+    )
 
         if "train_random_forest" in active_steps:
 
@@ -108,8 +110,6 @@ def go(config: DictConfig):
                     "rf_config": rf_config,
                     "max_tfidf_features": config["modeling"]["max_tfidf_features"],
                     "output_artifact": "random_forest_export",
-                    "output_type": "model_export",
-                    "output_description": "Random forest model to predict listing price",
                 },
             )
 
