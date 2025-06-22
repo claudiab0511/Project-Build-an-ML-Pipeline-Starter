@@ -116,12 +116,19 @@ def go(config: DictConfig):
 
 
         if "test_regression_model" in active_steps:
-
             ##################
             # Implement here #
             ##################
+            _ = mlflow.run(
+                os.path.join(hydra.utils.get_original_cwd(), "components", "test_regression_model"),
+                "main",
+                parameters={
+                    "mlflow_model": "random_forest_export:prod",
+                    "test_artifact": "test_data.csv:latest"
+                },
+            )
 
-            pass
+
 
 
 if __name__ == "__main__":
